@@ -1,11 +1,25 @@
 <html>
 <head>Final Assignment</head>
+<style>
+  body{
+  background-color: purple;}
+  h1{
+    color: white;
+    margin-left: 40px;
+    font-size: 50px;
+  }
+  p{
+    color: pink;
+    margin-left: 30px;
+    font-size: 25px;
+  }
+  </style>
 <body>
   <div id="album"></div>
   <artist>djkatykat</artist>
   <album>Look Up</album>
 <h1>Assignment 10 - Beta</h1>
-
+<a class="twitter-timeline" data-lang="en" data-width="220" data-height="200" data-theme="light" href="https://twitter.com/djkatykat?ref_src=twsrc%5Etfw">Tweets by djkatykat</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>
   For this assignment, I want to pull together all my social media accounts and
   my <a href="https://www.youtube.com/channel/UC7CAggtPzx5OvWdRUqXjuKg">YouTube Channel</a>.
@@ -14,15 +28,16 @@
   that has information about me as well.
 </p>
   </body>
-</html>
-<script type= javascript src:"">
-  function(createCall){
+<script type= javascript src:"https://api.musixmatch.com/ws/1.1/apikey=5c14af6f3e042d91e1a6ecdaacc78a9c"></script>
+<script>
+  function createCall(){
     let myScript = document.createElement("script");
     let tags = document.getElementById('djKatyKat').value;
-    myScript.src = "";
+    myScript.src = "https://api.musixmatch.com/ws/1.1/artist.search?q_artist=djkatykat&page_size=5&apikey=5c14af6f3e042d91e1a6ecdaacc78a9c";
   }
-  function albumSongs(songData){
+  function artistSongs(artistData){
     var myDiv = document.getElementById("album");
-    for(let i = 0; i < 10; i++)
+    console.log(artistData.message.body.artist.artist_name);
   }
   </script>
+</html>
