@@ -32,8 +32,10 @@
 <script>
   function createCall(){
     let myScript = document.createElement("script");
-    let tags = document.getElementById('djKatyKat').value;
-    myScript.src = "https://api.musixmatch.com/ws/1.1/artist.search?q_artist=djkatykat&page_size=5&apikey=5c14af6f3e042d91e1a6ecdaacc78a9c";
+    myScript.src = "https://api.musixmatch.com/ws/1.1/artist.search?q_artist=djkatykat&page_size=5&tags=djKatyKat&apikey=5c14af6f3e042d91e1a6ecdaacc78a9c";
+    myScript.createCall();
+    document.body.appendChild(myScript);
+
   }
   function artistSongs(artistData){
     var myDiv = document.getElementById("album");
