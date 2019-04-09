@@ -39,6 +39,11 @@
   }
   function artistSongs(artistData){
     var myDiv = document.getElementById("album");
+    var artist = json.message.body.artist_list;
+    for(let i = 0, i < artist.length, i++){
+      results = artist[i].artist.artist_name;
+      innerHTML(artist);
+    };
     console.log(artistData.message.body.artist.artist_name);
   }
   </script>
